@@ -69,7 +69,6 @@ It could be shown that this distribution already converges to a normal distribut
 
 $$
 \lim_{t \to \infty} x_t \sim \mathcal{N}(0, 1)
-
 $$
 
 ![Diffusion process example on an image over 500 steps. For testing if each distribution was likely a N(0, 1) distribution, it was applied Kolmogorov-Smirnov test. ](imgs/distribution_subplots.png)

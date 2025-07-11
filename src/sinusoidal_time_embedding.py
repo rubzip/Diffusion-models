@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from .diffusion_model import TimeEmbedding, DenoisingModel
+from .diffusion_model import TimeEmbedding
 
 class SinusoidalTimeEmbedding(TimeEmbedding):
     def __init__(self, embedding_dim: int, max_length: int = 1_000):
