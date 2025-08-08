@@ -1,0 +1,11 @@
+{
+    "num_timesteps": 200,
+    "beta_min": 0.0001,
+    "beta_max": 0.02,
+    "embedding_dim": 256,
+    "input_shape": [
+        3,
+        32,
+        32
+    ]
+}
