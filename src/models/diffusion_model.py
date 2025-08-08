@@ -139,11 +139,7 @@ class DiffusionModel(nn.Module):
         sigma_t = self.sigmas[t]
         return alpha_bar_t, beta_t, sigma_t
 
-    @staticmethod
-    def forward_noising_step(data: torch.Tensor, noise: torch.Tensor, alpha_bar_t: torch.Tensor) -> torch.Tensor:
-        # TODO: Solve alpha_bar_t issue
-        # This method should not be static, as it requires alpha_bar_t that is computed as a method.
-        # forward_noising_step should take inputs (data, noise, t) and compute alpha_bar_t internally.
+    def forward_noising_step(self, data: torch.Tensor, noise: torch.Tensor, t: torch.Tensor) -> torch.Tensor:
         """
         Forward noising steps.
 
@@ -155,6 +151,7 @@ class DiffusionModel(nn.Module):
         Returns:
             torch.Tensor: Output tensor after applying the diffusion process.
         """
+        alpha_bar_t, _, _ = self._get_coefficents(t)
         alpha_bar_t_expanded = alpha_bar_t.view(-1, 1, 1, 1)
         noised_data = torch.sqrt(alpha_bar_t_expanded) * data + torch.sqrt(1.0 - alpha_bar_t_expanded) * noise
         return noised_data

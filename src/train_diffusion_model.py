@@ -18,11 +18,10 @@ def train_diffusion_model(model: DiffusionModel, dataloader: DataLoader, optimiz
 
             # Generating random time steps
             t = torch.randint(0, model.num_timesteps, (data.size(0),), device=device)
-            alpha_bar_t, _, _ = model._get_coefficents(t)
 
             # Forward pass through the diffusion model
             noise = torch.randn_like(data)
-            noised_data = model.forward_noising_step(data, noise, alpha_bar_t).to(device)
+            noised_data = model.forward_noising_step(data, noise, t).to(device)
             predicted_noise = model(noised_data, t)
 
             # Simplified Loss Function makes the MSE between the predicted noise and the actual noise
