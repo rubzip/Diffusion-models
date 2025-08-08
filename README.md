@@ -1,6 +1,6 @@
-# Diffusion Models - Deep Learning Project
+# Diffusion Models
 
-This project implements diffusion models for image generation using the CIFAR10 dataset. **This is an educational project created to understand and learn about diffusion models**, which are a class of generative models that learn to generate data through a gradual diffusion process.
+This project implements DDM paper for image generation using the CIFAR10 dataset. **This is an educational project created to understand and learn about diffusion models**, which are a class of generative models that learn to generate data through a gradual diffusion process.
 
 ## Architecture
 
