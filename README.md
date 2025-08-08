@@ -7,7 +7,7 @@ This project implements DDM paper for image generation using the CIFAR10 dataset
 - **U-Net Architecture**: Implementation of a U-Net network for the denoising process
 - **Sinusoidal Embedding**: Temporal sinusoidal encoding for the diffusion process
 
-## 🛠️ Installation
+## Installation
 
 1. Clone the repository:
 ```bash
