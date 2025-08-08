@@ -1,3 +1,4 @@
+from pathlib import Path
 import torch
 
 from src.models.diffusion_model import DiffusionModel
@@ -24,7 +25,7 @@ if __name__ == "__main__":
     )
     # Next line loads the pretrained model as a checkpoint if it exists.
     # TODO: Create a cleaner way to handle with doing this (probably argparse)
-    model = load_pretrained_diffusion_unet(MODEL_PATH, SETTINGS_PATH) if MODEL_PATH.exists() else model
+    model = load_pretrained_diffusion_unet(MODEL_PATH, SETTINGS_PATH)
     print("Diffusion model initialized.")
 
     print("Starting training...")
