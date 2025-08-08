@@ -1,6 +1,12 @@
-NUM_TIMESTEPS = 1000
-EPOCHS = 10
+NUM_TIMESTEPS = 200
+EPOCHS = 40
+BATCH_SIZE = 8
+
 BETA_MIN = 1e-4
 BETA_MAX = 0.02
+
 EMBEDDING_DIM = 256
-INPUT_SHAPE = (3, 256, 256)
+INPUT_SHAPE = (3, 32, 32)
+
+MODEL_PATH = "models/diffusion_model.pth"
+SETTINGS_PATH = "models/settings.json"
