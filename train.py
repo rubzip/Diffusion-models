@@ -4,16 +4,16 @@ import torch
 from src.models.diffusion_model import DiffusionModel
 from src.train_diffusion_model import train_diffusion_model
 from src.models.sinusoidal_time_embedding import SinusoidalTimeEmbedding
-from src.utils import load_pretrained_denoising_unet, load_cifar10, save_model, load_pretrained_diffusion_unet
+from src.utils import load_pretrained_denoising_unet, load_emoji, save_model, load_pretrained_diffusion_unet
 from config import NUM_TIMESTEPS, EPOCHS, BETA_MIN, BETA_MAX, EMBEDDING_DIM, INPUT_SHAPE, BATCH_SIZE, MODEL_PATH, SETTINGS_PATH
 
 if __name__ == "__main__":
-    print("Loading CIFAR-10 dataset...")
-    dataloader = load_cifar10(batch_size=BATCH_SIZE, shuffle=True, num_workers=4)
+    print("Loading emoji dataset...")
+    dataloader = load_emoji(batch_size=BATCH_SIZE, shuffle=True, num_workers=4)
     print(f"Dataset already loaded, number of samples: {len(dataloader.dataset)}")
 
     print("Loading pretrained denoising UNet...")
-    denoising_model = load_pretrained_denoising_unet(t_emb_dim=EMBEDDING_DIM)
+    denoising_model = load_pretrained_denoising_unet(t_emb_dim=EMBEDDING_DIM, in_channels=INPUT_SHAPE[0], out_channels=INPUT_SHAPE[0])
     embedding_model = SinusoidalTimeEmbedding(embedding_dim=EMBEDDING_DIM, max_length=NUM_TIMESTEPS)
     model = DiffusionModel(
         denoising_model=denoising_model,

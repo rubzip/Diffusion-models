@@ -12,7 +12,7 @@ def train_diffusion_model(model: DiffusionModel, dataloader: DataLoader, optimiz
     history = {"loss": []}
     for epoch in range(num_epochs):
         total_loss = 0.0
-        for data, _ in dataloader:
+        for data in dataloader:
             data = data.to(device)
             optimizer.zero_grad()
 

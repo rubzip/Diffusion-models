@@ -4,7 +4,7 @@
     "beta_max": 0.02,
     "embedding_dim": 256,
     "input_shape": [
-        3,
+        1,
         32,
         32
     ]
