@@ -4,7 +4,7 @@ This project implements DDM paper for image generation using the CIFAR10 dataset
 
 Example of generated image
 
-![https://github.com/rubzip/Diffusion-models/blob/main/imgs/generated_image.png](https://github.com/rubzip/Diffusion-models/blob/main/imgs/generated_image.png)
+![https://github.com/rubzip/Diffusion-models/blob/emoji/imgs/generated_image.png](https://github.com/rubzip/Diffusion-models/blob/emoji/imgs%2Fgenerated_image.png)
 ## Architecture
 
 - **U-Net Architecture**: Implementation of a U-Net network for the denoising process
