@@ -2,6 +2,9 @@
 
 This project implements DDM paper for image generation using the CIFAR10 dataset. **This is an educational project created to understand and learn about diffusion models**, which are a class of generative models that learn to generate data through a gradual diffusion process.
 
+Example of generated image
+
+![https://github.com/rubzip/Diffusion-models/blob/main/imgs/generated_image.png](https://github.com/rubzip/Diffusion-models/blob/main/imgs/generated_image.png)
 ## Architecture
 
 - **U-Net Architecture**: Implementation of a U-Net network for the denoising process
